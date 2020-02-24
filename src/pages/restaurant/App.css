@@ -1,0 +1,21 @@
+.container{
+  margin-top: 15px;
+}
+
+.item-menu{
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+:root{
+  --color: #4f3961;
+}
+
+.item-container{
+  color: #ffff;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 15px;
+  background-color: var(--color);
+  box-shadow: 8px 8px 5px -8px var(--color);
+}

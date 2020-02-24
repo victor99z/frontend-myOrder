@@ -1,0 +1,17 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+.title-navbar{
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-menu{
+  font-family: sans-serif;
+  color: #ffff;
+  background-color: grey;
+  text-align: center;
+}
