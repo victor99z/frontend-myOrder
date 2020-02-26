@@ -11,6 +11,21 @@
   --color: #4f3961;
 }
 
+.paper-home{
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #4f3961;
+}
+
+.container-paper{
+  padding: 15px;
+}
+
+body{
+  background-color: #eee;
+}
 .item-container{
   color: #ffff;
   font-size: 16px;

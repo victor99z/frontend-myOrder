@@ -1,0 +1,14 @@
+import React from 'react';
+import './components/App.css';
+
+import Container from '@material-ui/core/Container'
+import TableView from './components/Table'
+
+export default function Restaurants(){
+
+  return (
+    <Container maxWidth="md" className="container">
+      <TableView />
+    </Container>
+  );
+}

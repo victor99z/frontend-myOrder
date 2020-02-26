@@ -9,6 +9,14 @@
   justify-content: center;
 }
 
+
+
+@media(max-width:400px){
+  .tab-containe{
+    font-size: 2px;
+  }
+}
+
 .item-menu{
   font-family: sans-serif;
   color: #ffff;
