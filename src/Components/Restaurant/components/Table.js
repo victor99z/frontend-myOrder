@@ -12,7 +12,7 @@ import {
 } from '@material-ui/core/'
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
-import api from '../../../services/api'
+import Api from '../../../services/Api'
 
 export default function TableView(){
 
@@ -20,7 +20,7 @@ export default function TableView(){
 
   useEffect(() => {
     async function loadProducts(){
-      const response = await api.get('/restaurant/list')
+      const response = await Api.get('/restaurant/list')
       setProducs(response.data)
     }
     loadProducts()

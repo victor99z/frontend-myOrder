@@ -4,50 +4,78 @@ import {
   Container,
   Button,
   TextField,
-  Typography,
-  Grid,
   Paper
 } from '@material-ui/core'
 
-export default function Login(){
-  return(
-    <Container maxWidth="xs" align="center" style={{marginTop: "15%"}}>
-      <Paper>
-      <Grid container spacing={3} className="container-login">
-        <Grid item xs={12}>
-          <Typography variant="h5" align="center">
-            Autentição
-          </Typography>
-        </Grid>
-        <Grid item xs={12}>
-          <form autoComplete="off" className="form">
-            <Grid item xs={12}>
-              <TextField 
-                label="Usuário" 
-                variant="outlined"
-                color="primary"
-              />
-            </Grid>
-            <Grid item xs={12}>
-              <TextField 
-                label="Usuário" 
-                variant="outlined"
-                color="primary"
-              />
-            </Grid>
+import Auth from './Auth'
 
-            <Grid item xs="12" spacing={2}>
-              <Button variant="contained" color="primary">
+export default function Login(){
+
+  const [user,setUser] = React.useState([]);
+
+  function userAuth(e){
+    console.log(e.currentTarget.value)
+  }
+
+  return(
+    <>
+      <Container maxWidth="xs" className="container">
+        <Paper elevation={2} className="paper" >
+          <p className="title">Login</p>
+          <hr/>
+          <div className="form">
+            <form autoComplete="off">
+              <TextField 
+                label="Usuário"
+                variant="outlined"
+                color="primary"
+                fullWidth
+                className="input"
+                style={
+                  {
+                    marginBottom:25, 
+                    marginTop: 15
+                  }
+                }
+              />
+              <TextField 
+                label="Senha"
+                variant="outlined"
+                color="primary"
+                type="password"
+                fullWidth
+                style={
+                  {
+                    marginBottom:20
+                  }
+                }
+              />
+              <Button
+                type="submit" 
+                variant="contained" 
+                color="primary" 
+                fullWidth 
+                style={
+                  {
+                    marginTop:5, 
+                    marginBottom:15, 
+                    fontSize:16, 
+                    padding: 10
+                  }
+                }
+                onClick={
+                  (e) => { 
+                    e.preventDefault(); 
+                    userAuth(e)
+                  } 
+                }
+              >
                 Entrar
               </Button>
-              <Button variant="contained" color="secondary">
-                Recuperar senha
-              </Button>
-            </Grid>
-          </form>
-        </Grid>
-      </Grid>
-      </Paper>
-    </Container>
+            </form>
+          </div>
+        </Paper>
+      </Container>
+    </>
   )
 }

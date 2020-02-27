@@ -1,3 +1,32 @@
-.form{
+.container{
   padding: 15px;
+  align-self: center;
+  justify-content: center;
+  align-items: center;
 }
+.paper{
+  padding: 15px;
+  margin-bottom: 15px;
+  width: auto;
+}
+.title{
+  padding: 5px;
+  color: #3f51b5;
+  text-align: center;
+  font-weight: lighter;
+  font-size: 34px;
+  font-family: Helvetica;
+}
+
+hr{
+  margin-top: 10px;
+  border-style: inset;
+  border-width: 1px;
+}
+
+.form{
+  margin-top: 2vh;
+  padding: 5px;
+}
+
+
