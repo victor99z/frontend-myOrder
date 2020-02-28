@@ -3,7 +3,7 @@ import Api from '../../services/Api'
 
 const Auth = ( props ) => {
   return(
-    console.log(props)
+    console.log("test")
   )
 }
 

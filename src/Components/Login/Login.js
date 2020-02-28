@@ -67,6 +67,7 @@ export default function Login(){
                   (e) => { 
                     e.preventDefault(); 
                     userAuth(e)
+                    alert("passed")
                   } 
                 }
               >
