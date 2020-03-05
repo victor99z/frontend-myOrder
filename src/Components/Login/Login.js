@@ -6,15 +6,25 @@ import {
   TextField,
   Paper
 } from '@material-ui/core'
+import Api from '../../services/Api'
 
-import Auth from './Auth'
 
 export default function Login(){
 
-  const [user,setUser] = React.useState([]);
-
-  function userAuth(e){
-    console.log(e.currentTarget.value)
+  const [username,setUsername] = React.useState('');
+  const [password, setPassword] = React.useState('');
+  
+  async function Auth(event){
+    event.preventDefault()
+    
+    try{
+      const response = Api.post("/auth/login", {username, password})
+      if((await response).status === 200){
+        alert("Usuário logado")
+      }
+    }catch(e){
+      alert(e)
+    }
   }
 
   return(
@@ -31,6 +41,7 @@ export default function Login(){
                 color="primary"
                 fullWidth
                 className="input"
+                onChange={ e => setUsername(e.target.value) }
                 style={
                   {
                     marginBottom:25, 
@@ -49,12 +60,14 @@ export default function Login(){
                     marginBottom:20
                   }
                 }
+                onChange={ e => setPassword(e.target.value) }
               />
               <Button
                 type="submit" 
                 variant="contained" 
                 color="primary" 
-                fullWidth 
+                fullWidth
+                onClick={ e => { Auth(e) } } 
                 style={
                   {
                     marginTop:5, 
@@ -62,13 +75,6 @@ export default function Login(){
                     fontSize:16, 
                     padding: 10
                   }
-                }
-                onClick={
-                  (e) => { 
-                    e.preventDefault(); 
-                    userAuth(e)
-                    alert("passed")
-                  } 
                 }
               >
                 Entrar

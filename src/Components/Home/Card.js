@@ -1,13 +1,17 @@
 import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Paper from '@material-ui/core/Paper'
-import './Card.css';
+
+const container = {
+  marginTop: 30,
+  padding: 15
+}
 
 const Card = () => {
   return(
     <>
-      <Paper elevation={2} className="paper-home">
-        <div className="container-paper">
+      <Paper elevation={2} style={container}>
+        <div >
           <Typography variant="h5" component="h3" align="center">
             Bem vindo ao <strong>MyOrder</strong> app.
           </Typography>
@@ -16,8 +20,8 @@ const Card = () => {
           </Typography>
           </div>
       </Paper>
-      <Paper elevation={2} className="paper-home">
-      <div className="container-paper">
+      <Paper elevation={2} style={container}>
+      <div>
         <Typography variant="body1" align="left" className="typo-header">
           Github: <a href="https://github.com/jubileu99/" target="blank">Jubileu99 </a>
         </Typography>

@@ -20,7 +20,7 @@ import Home from '../Home/Home'
 
 export default function NavBar() {
 
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState();
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -29,13 +29,13 @@ export default function NavBar() {
   return (
     <>
       <Router>
-        <AppBar position="static" >
+        <AppBar position="static">
           <Toolbar className="title-navbar">
             <Typography variant="h2" color="initial" >
               <RestaurantMenuIcon fontSize="large" />
             </Typography>
           </Toolbar>
-          <Container maxWidth="md" className="tab-container">
+          <Container maxWidth="md" className="tab-container" position="relative">
             <Tabs
               value={value}
               onChange={handleChange}

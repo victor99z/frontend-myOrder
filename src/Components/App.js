@@ -4,7 +4,7 @@ import Login from './Login/Login'
 
 const App = () => {
   return (
-    <Navbar/>
+    <Login/>
   )
 }
 

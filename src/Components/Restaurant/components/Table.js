@@ -32,24 +32,27 @@ export default function TableView(){
       <Table size="small" aria-label="a dense table">
         <TableHead>
           <TableRow>
-            <TableCell align="center" size="small">#</TableCell>
+            
             <TableCell align="center">Nome</TableCell>
-            <TableCell align="center">Telefone</TableCell>
-            <TableCell align="center">Email</TableCell>
+            
             <TableCell align="center">Ações</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           {product.map( item => (
             <TableRow key={item.id}>
-              <TableCell component="th" align="center">{item.id}</TableCell>
+              
               <TableCell align="center">{item.name}</TableCell>
-              <TableCell align="center">{item.phone}</TableCell>
-              <TableCell align="center">{item.email}</TableCell>
+              
               <TableCell align="center">
               <Tooltip title="Remover">
                 <IconButton aria-label="delete" onClick={ () => {} } > { /* onClick={ () => deleteRestaurant(item.id)} */}
                   <DeleteIcon color="secondary"/>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Editar">
+                <IconButton aria-label="editar" onClick={ () => {} } > { /* onClick={ () => updateRestaurant(item.id)} */ }
+                  <EditIcon color="primary" />
                 </IconButton>
               </Tooltip>
               <Tooltip title="Editar">
